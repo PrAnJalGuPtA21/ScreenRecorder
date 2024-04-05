@@ -1,0 +1,9 @@
+<h1>Screen Recorder</h1>
+<video #videoElement ></video>
+
+<button id="btn-start-recording" (click)="startRecording()">Start Recording</button>
+<button id="btn-stop-recording" (click)="stopRecording()" [disabled]="!recorder">Stop Recording</button>
+
+<div *ngIf="recordedVideoURL">
+  <a [href]="recordedVideoURL" download="recorded_video.mp4">Download Recorded Video</a>
+</div>
